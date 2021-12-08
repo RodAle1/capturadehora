@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos Personales</title>
+</head>
+<body>
+    <h1>Datos Personales</h1>
+    <script lenguage="javascript">
+        var body = document.getElementsByTagName("body")[0];
+        var titulo2 = document.createElement("h2");
+        var parrafo = document.createElement("p");
+        
+
+        titulo2.innerHTML += "Nombre: QUITUK GOMEZ RODRIGO ALEJANDRO<br><br>";
+        titulo2.innerHTML += "Numero de control: 21390934 <br><br>";
+        titulo2.innerHTML += "Carrera: ISIC <br><br>";
+        titulo2.innerHTML += "Grupo: I7U <br><br>";
+        titulo2.innerHTML += "Semestre: 7º <br><br><br>";
+        titulo2.innerHTML += "Logica de expresión regular<br><br>";
+        titulo2.innerHTML += `"/^([01]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/ <br> 
+                              El primer número (hora) es un número entero, desde 0 a 1  y de 0 a 9 <br>
+                              permitiendo un número de un solo dígito ó un numero entre 20 o 23. <br>
+                              los minutos van desde 00 hasta 59, al igual que los segundos."<br><br>`;
+        
+        titulo2.innerHTML += `"/^(?:0?[1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]\s?(?:[aApP](\.?)[mM])(\.?)?$/<br>
+                                El primer numero (horas) desde 01 a 09 pero de igual manera permitiendo un número<br>
+                                de un solo dígito ó un numero desde 10 hasta 12, los minutos van desde 00 hasta 59,<br>
+                                al igual que los segundos. Seguido se pone un espacio (opcional), seguido se puede <br>
+                                poner a ó A, p ó P, seguido de un punto (opcional) y una m ó M, y al final lleva <br>
+                                otro punto (opcional) para completar el P.M. (p.m.) ó A.M. (a.m.)."`;
+        body.appendChild(titulo2);
+        bdoy.appendChild(parrafo);
+        
+        
+    </script>
+
+</body>
+</html>

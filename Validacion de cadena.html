@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <p >
+        <font face="Comic Sans MS" size="5" color="#0000ff"><center>Ejercicio 8: hora del dia con minutos y segundos</center></font>
+    </p>
+</head>
+<body>
+    <h1><center>FORMULARIO PARA LA HORA DEL DIA </center></h1>
+
+    <form name="Horario"   action="Datos Personales.html">
+        <h2>
+            <font color='llelow'>
+                <center>INGRESE LA HORA ACTUAL</center></font></h2>
+        <p><font color='red'><center>EJEMPLO DE CAPTURA 1: HH:MM:SS</center></font></p>
+        <p><font color='red'><center>EJEMPLO DE CAPTURA 2: HH:MM:SS A.M./P.M.</center></font></p>
+        <center><input type="text" id="hora" ><br><br></center>
+
+        <center><input type="button" value="Continuar" onclick="verificar()"></center>
+    </form> 
+
+    <script language="javascript">
+        function verificar(){
+            //agregar expresion regular
+            var hora = document.Horario.hora.value;
+
+            //expresiones regulares
+            const exRegular12 = /^(?:0?[1-9]|1[0-2]):[0-5][0-9]:[0-5][0-9]\s?(?:[aApP](\.?)[mM])(\.?)?$/;
+            const exRegular24 = /^([0-1]?[0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]$/
+            
+            //valida la hora con las expresiones regulaes
+            if (exRegular12.test(hora) == true) {
+              alert("La hora fue escrita en sistema de 12 horas");
+              document.Horario.submit();
+            }//Fin del if
+            else if (exRegular24.test(hora) == true) {
+              alert("La hora fue escrita en sistema de 24 horas");
+              document.Horario.submit();
+            }//Fin del else if
+            else alert("La hora fue mal escrita, vuelta a intentarlo");
+
+        }
+    </script>
+    
+</body>
+</html>
